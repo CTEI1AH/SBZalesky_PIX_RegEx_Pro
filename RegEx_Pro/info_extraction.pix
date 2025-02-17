@@ -48,7 +48,7 @@
           <PropertyValue z:Id="i8">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"C:\Users\SBZalesky\Desktop\Last\Смотр\RegEx_Config.xlsx"</_expression>
+            <_expression>@"RegEx_Config.xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -78,7 +78,7 @@
           <PropertyValue z:Id="i11">
             <PropertyName>WordFilePath</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>$@"C:\Users\SBZalesky\Desktop\Last\DOCX\{in_str_type}.docx"</_expression>
+            <_expression>$@"Files\DOCX\{in_str_type}.docx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -2094,14 +2094,14 @@
   <Params>
     <Parameter z:Id="i205">
       <DefaultValueExpression></DefaultValueExpression>
-      <Description></Description>
+      <Description>Тип документа</Description>
       <Name>in_str_type</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
     <Parameter z:Id="i206">
       <DefaultValueExpression></DefaultValueExpression>
-      <Description></Description>
+      <Description>Таблица отчета о результате раблоты</Description>
       <Name>io_dt_rezults</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>

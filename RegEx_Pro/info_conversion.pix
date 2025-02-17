@@ -600,28 +600,28 @@
   <Params>
     <Parameter z:Id="i57">
       <DefaultValueExpression></DefaultValueExpression>
-      <Description></Description>
+      <Description>Номер документа</Description>
       <Name>io_str_docNumber</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
     <Parameter z:Id="i58">
       <DefaultValueExpression></DefaultValueExpression>
-      <Description></Description>
+      <Description>Дата документа</Description>
       <Name>io_str_docDate</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
     <Parameter z:Id="i59">
       <DefaultValueExpression></DefaultValueExpression>
-      <Description></Description>
+      <Description>ИНН документа</Description>
       <Name>io_str_docINN</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
     <Parameter z:Id="i60">
       <DefaultValueExpression></DefaultValueExpression>
-      <Description></Description>
+      <Description>Ошибка</Description>
       <Name>in_str_exceptionSearch</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
@@ -637,13 +637,13 @@
   <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
     <d2p1:Variable z:Id="i61">
       <d2p1:DefaultValueExpression>@"dd.MMMM.yyyy"</d2p1:DefaultValueExpression>
-      <d2p1:Description></d2p1:Description>
+      <d2p1:Description>Формат даты</d2p1:Description>
       <d2p1:Name>str_date_format</d2p1:Name>
       <d2p1:TypeString>System.String</d2p1:TypeString>
     </d2p1:Variable>
     <d2p1:Variable z:Id="i62">
       <d2p1:DefaultValueExpression>new CultureInfo("ru-RU")</d2p1:DefaultValueExpression>
-      <d2p1:Description></d2p1:Description>
+      <d2p1:Description>Регион</d2p1:Description>
       <d2p1:Name>culture</d2p1:Name>
       <d2p1:TypeString>System.Globalization.CultureInfo</d2p1:TypeString>
     </d2p1:Variable>
