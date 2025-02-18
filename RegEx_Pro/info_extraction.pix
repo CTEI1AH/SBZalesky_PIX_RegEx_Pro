@@ -100,7 +100,7 @@
           <PropertyValue z:Id="i13">
             <PropertyName>List</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>list_startList</_expression>
+            <_expression>list_startPages</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -124,8 +124,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString() == "str_exceptionSearch")
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString() == "str_exceptionSearch")
+            .Select(row =&gt; row["Value"].ToString())
             .FirstOrDefault()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -158,8 +158,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString() == "RegEx_listSplit")
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString() == "RegEx_listSplit")
+            .Select(row =&gt; row["Value"].ToString())
             .FirstOrDefault()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -223,8 +223,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString().Contains("RegEx_listStart"))
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString().Contains("RegEx_listStart"))
+            .Select(row =&gt; row["Value"].ToString())
             .ToArray()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -264,7 +264,7 @@
                           <PropertyValue z:Id="i31">
                             <PropertyName>List</PropertyName>
                             <_dataType>Expression</_dataType>
-                            <_expression>list_startList</_expression>
+                            <_expression>list_startPages</_expression>
                             <_screenShotBase64 i:nil="true" />
                             <_value i:nil="true" />
                             <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -438,7 +438,7 @@
           <PropertyValue z:Id="i44">
             <PropertyName>List</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>list_startList</_expression>
+            <_expression>list_startPages</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -470,8 +470,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString().Contains("RegEx_number"))
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString().Contains("RegEx_number"))
+            .Select(row =&gt; row["Value"].ToString())
             .ToArray()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -504,8 +504,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString().Contains("RegEx_date"))
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString().Contains("RegEx_date"))
+            .Select(row =&gt; row["Value"].ToString())
             .ToArray()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -538,8 +538,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString().Contains("RegEx_INN"))
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString().Contains("RegEx_INN"))
+            .Select(row =&gt; row["Value"].ToString())
             .ToArray()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -572,8 +572,8 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["name"].ToString() == "str_exceptionINN")
-            .Select(row =&gt; row["value"].ToString())
+            .Where(row =&gt; row["Name"].ToString() == "str_exceptionINN")
+            .Select(row =&gt; row["Value"].ToString())
             .FirstOrDefault()</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
@@ -607,7 +607,7 @@
               <PropertyValue z:Id="i60">
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>int.Parse(list_startList[i].ToString())</_expression>
+                <_expression>int.Parse(list_startPages[i].ToString())</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -645,7 +645,7 @@
               <PropertyValue z:Id="i64">
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>int.Parse(list_startList[i+1].ToString()) -1 </_expression>
+                <_expression>int.Parse(list_startPages[i+1].ToString()) -1 </_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -1483,32 +1483,32 @@
                   <d9p1:ArgumentsToCompile xmlns:d10p1="http://schemas.datacontract.org/2004/07/BR.Core">
                     <d10p1:ArgumentItem z:Id="i144">
                       <d10p1:ArgumentName>Вид документа</d10p1:ArgumentName>
-                      <d10p1:Expression>null</d10p1:Expression>
+                      <d10p1:Expression>in_str_type</d10p1:Expression>
                       <d10p1:Type>System.Object</d10p1:Type>
                     </d10p1:ArgumentItem>
                     <d10p1:ArgumentItem z:Id="i145">
                       <d10p1:ArgumentName>Имя начального файла</d10p1:ArgumentName>
-                      <d10p1:Expression>null</d10p1:Expression>
+                      <d10p1:Expression>$"{in_str_type}.pdf"</d10p1:Expression>
                       <d10p1:Type>System.Object</d10p1:Type>
                     </d10p1:ArgumentItem>
                     <d10p1:ArgumentItem z:Id="i146">
                       <d10p1:ArgumentName>Имя обработанного PDF документа</d10p1:ArgumentName>
-                      <d10p1:Expression>null</d10p1:Expression>
+                      <d10p1:Expression>$"{io_str_docNumber}_{int_start}-{int_end}.pdf"</d10p1:Expression>
                       <d10p1:Type>System.Object</d10p1:Type>
                     </d10p1:ArgumentItem>
                     <d10p1:ArgumentItem z:Id="i147">
                       <d10p1:ArgumentName>Дата</d10p1:ArgumentName>
-                      <d10p1:Expression>null</d10p1:Expression>
+                      <d10p1:Expression>io_str_docDate</d10p1:Expression>
                       <d10p1:Type>System.Object</d10p1:Type>
                     </d10p1:ArgumentItem>
                     <d10p1:ArgumentItem z:Id="i148">
                       <d10p1:ArgumentName>Номер</d10p1:ArgumentName>
-                      <d10p1:Expression>null</d10p1:Expression>
+                      <d10p1:Expression>io_str_docNumber</d10p1:Expression>
                       <d10p1:Type>System.Object</d10p1:Type>
                     </d10p1:ArgumentItem>
                     <d10p1:ArgumentItem z:Id="i149">
                       <d10p1:ArgumentName>ИНН</d10p1:ArgumentName>
-                      <d10p1:Expression>null</d10p1:Expression>
+                      <d10p1:Expression>io_str_docINN</d10p1:Expression>
                       <d10p1:Type>System.Object</d10p1:Type>
                     </d10p1:ArgumentItem>
                   </d9p1:ArgumentsToCompile>
@@ -1534,243 +1534,15 @@
             <_activityFullName>Activities.BaseCollections.Dictionary.CreateDictionary</_activityFullName>
           </AbstractStep>
           <AbstractStep z:Id="i151" i:type="ExecutedStep">
-            <Childs />
-            <Id>1bc74c2e-961c-4f1f-9285-563c47871cbd</Id>
-            <Parent z:Ref="i58" />
-            <PropertyValues>
-              <PropertyValue z:Id="i152">
-                <PropertyName>Key</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>"Вид документа"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i153">
-                <PropertyName>Value</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>in_str_type</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i154">
-                <PropertyName>Dictionary</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>dict_rowToRezult</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-            </PropertyValues>
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Задать значение для "Вид документа"</Text>
-            <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i155" i:type="ExecutedStep">
-            <Childs />
-            <Id>625389a9-b9a9-4eba-939e-52dfa058341c</Id>
-            <Parent z:Ref="i58" />
-            <PropertyValues>
-              <PropertyValue z:Id="i156">
-                <PropertyName>Key</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>"Имя начального файла"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i157">
-                <PropertyName>Value</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>$"{in_str_type}.pdf"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i158">
-                <PropertyName>Dictionary</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>dict_rowToRezult</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-            </PropertyValues>
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Задать значение для "Имя начального файла"</Text>
-            <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i159" i:type="ExecutedStep">
-            <Childs />
-            <Id>b03fe72a-379a-4913-8471-69ecc65edc29</Id>
-            <Parent z:Ref="i58" />
-            <PropertyValues>
-              <PropertyValue z:Id="i160">
-                <PropertyName>Key</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>"Имя обработанного PDF документа"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i161">
-                <PropertyName>Value</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>$"{io_str_docNumber}_{int_start}-{int_end}.pdf"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i162">
-                <PropertyName>Dictionary</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>dict_rowToRezult</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-            </PropertyValues>
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Задать значение для "Имя обработанного PDF документа"</Text>
-            <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i163" i:type="ExecutedStep">
-            <Childs />
-            <Id>13a8afa8-64c3-41a6-bee3-44f4566f4233</Id>
-            <Parent z:Ref="i58" />
-            <PropertyValues>
-              <PropertyValue z:Id="i164">
-                <PropertyName>Key</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>"Дата"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i165">
-                <PropertyName>Value</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>io_str_docDate</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i166">
-                <PropertyName>Dictionary</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>dict_rowToRezult</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-            </PropertyValues>
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Задать значение для "Дата"</Text>
-            <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i167" i:type="ExecutedStep">
-            <Childs />
-            <Id>67751eaa-c12a-49bd-a1a5-a1f5b11c6909</Id>
-            <Parent z:Ref="i58" />
-            <PropertyValues>
-              <PropertyValue z:Id="i168">
-                <PropertyName>Key</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>"Номер"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i169">
-                <PropertyName>Value</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>io_str_docNumber</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i170">
-                <PropertyName>Dictionary</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>dict_rowToRezult</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-            </PropertyValues>
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Задать значение для "Номер"</Text>
-            <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i171" i:type="ExecutedStep">
-            <Childs />
-            <Id>84b46ca4-a2c4-4370-ab23-112a9a7ef101</Id>
-            <Parent z:Ref="i58" />
-            <PropertyValues>
-              <PropertyValue z:Id="i172">
-                <PropertyName>Key</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>"ИНН"</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i173">
-                <PropertyName>Value</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>io_str_docINN</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-              <PropertyValue z:Id="i174">
-                <PropertyName>Dictionary</PropertyName>
-                <_dataType>Expression</_dataType>
-                <_expression>dict_rowToRezult</_expression>
-                <_screenShotBase64 i:nil="true" />
-                <_value i:nil="true" />
-                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-              </PropertyValue>
-            </PropertyValues>
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Задать значение для "ИНН"</Text>
-            <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i175" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i176" i:type="ExecutedStep">
+              <AbstractStep z:Id="i152" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i177" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i153" i:type="ExecutedStep">
                     <Childs />
                     <Id>55a98e5a-d11b-4f2d-ba36-e7d912671185</Id>
-                    <Parent z:Ref="i176" />
+                    <Parent z:Ref="i152" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i178">
+                      <PropertyValue z:Id="i154">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>DateTime.ParseExact(io_str_docDate, "dd.MM.yyyy", CultureInfo.InvariantCulture)</_expression>
@@ -1778,7 +1550,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i179">
+                      <PropertyValue z:Id="i155">
                         <PropertyName>To</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>date_docDate</_expression>
@@ -1796,12 +1568,12 @@
 Дата документа</Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i180" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i156" i:type="ExecutedStep">
                     <Childs />
                     <Id>5b13731d-d904-4317-b17c-7db83b581c4c</Id>
-                    <Parent z:Ref="i176" />
+                    <Parent z:Ref="i152" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i181">
+                      <PropertyValue z:Id="i157">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>Path.Combine("Result",date_docDate.Year.ToString() , date_docDate.Month.ToString(), in_str_type)</_expression>
@@ -1809,7 +1581,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i182">
+                      <PropertyValue z:Id="i158">
                         <PropertyName>To</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>str_pdfPath_NEW</_expression>
@@ -1826,12 +1598,12 @@
                     <Text>Путь до нового документа</Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i183" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i159" i:type="ExecutedStep">
                     <Childs />
                     <Id>d8a3fc6a-b10f-4696-8a8f-156ad0ed9b81</Id>
-                    <Parent z:Ref="i176" />
+                    <Parent z:Ref="i152" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i184">
+                      <PropertyValue z:Id="i160">
                         <PropertyName>NewFolderPath</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>str_pdfPath_NEW</_expression>
@@ -1848,12 +1620,12 @@
                     <Text></Text>
                     <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i185" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i161" i:type="ExecutedStep">
                     <Childs />
                     <Id>2678bf8a-ff1a-47d4-98e9-be6dae984cef</Id>
-                    <Parent z:Ref="i176" />
+                    <Parent z:Ref="i152" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i186">
+                      <PropertyValue z:Id="i162">
                         <PropertyName>FromPdfPath</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>$@"Files\PDF\{in_str_type}.pdf"</_expression>
@@ -1861,7 +1633,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i187">
+                      <PropertyValue z:Id="i163">
                         <PropertyName>ToPdfPath</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>Path.Combine(str_pdfPath_NEW, $@"{io_str_docNumber}_{str_listCount}.pdf")</_expression>
@@ -1869,7 +1641,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i188">
+                      <PropertyValue z:Id="i164">
                         <PropertyName>Range</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>$@"{int_start}:{int_end}"</_expression>
@@ -1886,12 +1658,12 @@
                     <Text></Text>
                     <_activityFullName>Activities.PDF.SplitPDF</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i189" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i165" i:type="ExecutedStep">
                     <Childs />
                     <Id>2a23dde4-4c22-4746-a980-9a3d4896a691</Id>
-                    <Parent z:Ref="i176" />
+                    <Parent z:Ref="i152" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i190">
+                      <PropertyValue z:Id="i166">
                         <PropertyName>Key</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>"Имя обработанного PDF документа"</_expression>
@@ -1899,7 +1671,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i191">
+                      <PropertyValue z:Id="i167">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>$"{io_str_docNumber}_{int_start}-{int_end}.pdf"</_expression>
@@ -1907,7 +1679,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i192">
+                      <PropertyValue z:Id="i168">
                         <PropertyName>Dictionary</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>dict_rowToRezult</_expression>
@@ -1926,7 +1698,7 @@
                   </AbstractStep>
                 </Childs>
                 <Id>15cad466-0c2f-415a-a715-ae87da9f6ed9</Id>
-                <Parent z:Ref="i175" />
+                <Parent z:Ref="i151" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <AutoCloseMode>None</AutoCloseMode>
@@ -1936,14 +1708,14 @@
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i193" i:type="ExecutedStep">
+              <AbstractStep z:Id="i169" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i194" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i170" i:type="ExecutedStep">
                     <Childs />
                     <Id>1cfbea58-10c5-4ab9-8ba9-388a2db7a6ed</Id>
-                    <Parent z:Ref="i193" />
+                    <Parent z:Ref="i169" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i195">
+                      <PropertyValue z:Id="i171">
                         <PropertyName>Key</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>"Имя обработанного PDF документа"</_expression>
@@ -1951,7 +1723,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i196">
+                      <PropertyValue z:Id="i172">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>$"Ошибка({in_str_type})_{int_start}-{int_end}"</_expression>
@@ -1959,7 +1731,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i197">
+                      <PropertyValue z:Id="i173">
                         <PropertyName>Dictionary</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>dict_rowToRezult</_expression>
@@ -1976,10 +1748,10 @@
                     <Text>Задать значение для "Имя обработанного PDF документа"</Text>
                     <_activityFullName>Activities.BaseCollections.Dictionary.AddKey</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i198" i:type="CommentStep">
+                  <AbstractStep z:Id="i174" i:type="CommentStep">
                     <Childs />
                     <Id>9f94920b-cc04-447e-b83d-b1d854dac172</Id>
-                    <Parent z:Ref="i193" />
+                    <Parent z:Ref="i169" />
                     <PropertyValues />
                     <SelectedOptionId i:nil="true" />
                     <IsCollapsed>false</IsCollapsed>
@@ -1987,7 +1759,7 @@
                   </AbstractStep>
                 </Childs>
                 <Id>d7f8eab7-e3d5-45ba-b63b-6f0548b253c8</Id>
-                <Parent z:Ref="i175" />
+                <Parent z:Ref="i151" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <AutoCloseMode>None</AutoCloseMode>
@@ -2001,7 +1773,7 @@
             <Id>e1b6ce5e-f4d5-44d4-98ab-fdb90c9c4d39</Id>
             <Parent z:Ref="i58" />
             <PropertyValues>
-              <PropertyValue z:Id="i199">
+              <PropertyValue z:Id="i175">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>io_str_docNumber != str_exceptionSearch &amp; io_str_docDate != str_exceptionSearch</_expression>
@@ -2018,12 +1790,12 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.If</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i200" i:type="ExecutedStep">
+          <AbstractStep z:Id="i176" i:type="ExecutedStep">
             <Childs />
             <Id>b8f02941-092a-4ad5-ac7c-e926aff5608c</Id>
             <Parent z:Ref="i58" />
             <PropertyValues>
-              <PropertyValue z:Id="i201">
+              <PropertyValue z:Id="i177">
                 <PropertyName>Row</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>dict_rowToRezult</_expression>
@@ -2031,7 +1803,7 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i202">
+              <PropertyValue z:Id="i178">
                 <PropertyName>BaseDataTable</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>io_dt_rezults</_expression>
@@ -2052,15 +1824,15 @@
         <Id>de53d1ab-92bd-4749-9520-2c3f743a1568</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i203">
+          <PropertyValue z:Id="i179">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>list_startList.Count-2</_expression>
+            <_expression>list_startPages.Count-2</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i204">
+          <PropertyValue z:Id="i180">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>i</_expression>
@@ -2092,14 +1864,14 @@
   <Name>info_extraction.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i205">
+    <Parameter z:Id="i181">
       <DefaultValueExpression></DefaultValueExpression>
       <Description>Тип документа</Description>
       <Name>in_str_type</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i206">
+    <Parameter z:Id="i182">
       <DefaultValueExpression></DefaultValueExpression>
       <Description>Таблица отчета о результате раблоты</Description>
       <Name>io_dt_rezults</Name>
