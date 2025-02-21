@@ -111,7 +111,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>list_startList
+        <Text>list_startPages
 Список начальных страниц документа</Text>
         <_activityFullName>Activities.BaseCollections.List.CreateList</_activityFullName>
       </AbstractStep>
@@ -158,7 +158,7 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["Name"].ToString() == "RegEx_listSplit")
+            .Where(row =&gt; row["Name"].ToString() == "RegEx_pagesSplit")
             .Select(row =&gt; row["Value"].ToString())
             .FirstOrDefault()</_expression>
             <_screenShotBase64 i:nil="true" />
@@ -168,7 +168,7 @@
           <PropertyValue z:Id="i19">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>RegEx_listSplit</_expression>
+            <_expression>RegEx_pagesSplit</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -179,7 +179,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>RegEx_listSplit
+        <Text>RegEx_pagesSplit
 Разделитель по листам</Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
@@ -191,7 +191,7 @@
           <PropertyValue z:Id="i21">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Regex.Split(str_mergedDocx,RegEx_listSplit)</_expression>
+            <_expression>Regex.Split(str_mergedDocx,RegEx_pagesSplit)</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -199,7 +199,7 @@
           <PropertyValue z:Id="i22">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>arr_str_listFromDocx</_expression>
+            <_expression>arr_str_pagesFromDocx</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -210,7 +210,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>arr_str_listFromDocx
+        <Text>arr_str_pagesFromDocx
 Разбиение документа на страницы</Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
@@ -223,7 +223,7 @@
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>dt_config.AsEnumerable()
-            .Where(row =&gt; row["Name"].ToString().Contains("RegEx_listStart"))
+            .Where(row =&gt; row["Name"].ToString().Contains("RegEx_pagesStart"))
             .Select(row =&gt; row["Value"].ToString())
             .ToArray()</_expression>
             <_screenShotBase64 i:nil="true" />
@@ -233,7 +233,7 @@
           <PropertyValue z:Id="i25">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>arr_RegEx_listStart</_expression>
+            <_expression>arr_RegEx_pagesStart</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -244,7 +244,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>arr_RegEx_listStart
+        <Text>arr_RegEx_pagesStart
 Признаки первой страницы</Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
@@ -272,7 +272,7 @@
                           <PropertyValue z:Id="i32">
                             <PropertyName>Object</PropertyName>
                             <_dataType>Expression</_dataType>
-                            <_expression>i_listFromDocx</_expression>
+                            <_expression>i_pagesFromDocx</_expression>
                             <_screenShotBase64 i:nil="true" />
                             <_value i:nil="true" />
                             <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -341,7 +341,7 @@
                   <PropertyValue z:Id="i36">
                     <PropertyName>Condition</PropertyName>
                     <_dataType>Expression</_dataType>
-                    <_expression>Regex.IsMatch(str_listFromDocx,RegEx_listStart)</_expression>
+                    <_expression>Regex.IsMatch(str_pagesFromDocx,RegEx_pagesStart)</_expression>
                     <_screenShotBase64 i:nil="true" />
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -363,7 +363,7 @@
               <PropertyValue z:Id="i37">
                 <PropertyName>Collection</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>arr_RegEx_listStart</_expression>
+                <_expression>arr_RegEx_pagesStart</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -371,7 +371,7 @@
               <PropertyValue z:Id="i38">
                 <PropertyName>Iterator</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>RegEx_listStart</_expression>
+                <_expression>RegEx_pagesStart</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -379,7 +379,7 @@
               <PropertyValue z:Id="i39">
                 <PropertyName>Counter</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>i_RegEx_listStart</_expression>
+                <_expression>i_RegEx_pagesStart</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -400,7 +400,7 @@
           <PropertyValue z:Id="i40">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>arr_str_listFromDocx</_expression>
+            <_expression>arr_str_pagesFromDocx</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -408,7 +408,7 @@
           <PropertyValue z:Id="i41">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>str_listFromDocx</_expression>
+            <_expression>str_pagesFromDocx</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -416,7 +416,7 @@
           <PropertyValue z:Id="i42">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>i_listFromDocx</_expression>
+            <_expression>i_pagesFromDocx</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -446,7 +446,7 @@
           <PropertyValue z:Id="i45">
             <PropertyName>Object</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>arr_str_listFromDocx.Length + 1</_expression>
+            <_expression>arr_str_pagesFromDocx.Length + 1</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -765,7 +765,7 @@
                               <PropertyValue z:Id="i79">
                                 <PropertyName>Value</PropertyName>
                                 <_dataType>Expression</_dataType>
-                                <_expression>Regex.Match(arr_str_listFromDocx[j-1],RegEx_number).Groups[1].Value</_expression>
+                                <_expression>Regex.Match(arr_str_pagesFromDocx[j-1],RegEx_number).Groups[1].Value</_expression>
                                 <_screenShotBase64 i:nil="true" />
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -842,7 +842,7 @@
                       <PropertyValue z:Id="i84">
                         <PropertyName>Condition</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>Regex.Match(arr_str_listFromDocx[j-1],RegEx_number).Groups[1].Value != "" &amp; io_str_docNumber == str_exceptionSearch</_expression>
+                        <_expression>Regex.Match(arr_str_pagesFromDocx[j-1],RegEx_number).Groups[1].Value != "" &amp; io_str_docNumber == str_exceptionSearch</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -908,7 +908,7 @@
                               <PropertyValue z:Id="i92">
                                 <PropertyName>Value</PropertyName>
                                 <_dataType>Expression</_dataType>
-                                <_expression>Regex.Match(arr_str_listFromDocx[j-1],RegEx_date).Groups[1].Value</_expression>
+                                <_expression>Regex.Match(arr_str_pagesFromDocx[j-1],RegEx_date).Groups[1].Value</_expression>
                                 <_screenShotBase64 i:nil="true" />
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -985,7 +985,7 @@
                       <PropertyValue z:Id="i97">
                         <PropertyName>Condition</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>Regex.Match(arr_str_listFromDocx[j-1],RegEx_date).Groups[1].Value != "" &amp; io_str_docDate == str_exceptionSearch</_expression>
+                        <_expression>Regex.Match(arr_str_pagesFromDocx[j-1],RegEx_date).Groups[1].Value != "" &amp; io_str_docDate == str_exceptionSearch</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -1218,7 +1218,7 @@
                               <PropertyValue z:Id="i119">
                                 <PropertyName>Collection</PropertyName>
                                 <_dataType>Expression</_dataType>
-                                <_expression>Regex.Matches(arr_str_listFromDocx[j-1],RegEx_INN,RegexOptions.IgnoreCase | RegexOptions.Multiline)</_expression>
+                                <_expression>Regex.Matches(arr_str_pagesFromDocx[j-1],RegEx_INN,RegexOptions.IgnoreCase | RegexOptions.Multiline)</_expression>
                                 <_screenShotBase64 i:nil="true" />
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -1290,7 +1290,7 @@
                       <PropertyValue z:Id="i124">
                         <PropertyName>Condition</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>Regex.Match(arr_str_listFromDocx[j-1],RegEx_INN).Groups[1].Value != "" &amp; io_str_docINN == str_exceptionSearch</_expression>
+                        <_expression>Regex.Match(arr_str_pagesFromDocx[j-1],RegEx_INN).Groups[1].Value != "" &amp; io_str_docINN == str_exceptionSearch</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -1455,7 +1455,7 @@
               <PropertyValue z:Id="i141">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>str_listCount</_expression>
+                <_expression>str_pagesCount</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -1636,7 +1636,7 @@
                       <PropertyValue z:Id="i163">
                         <PropertyName>ToPdfPath</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>Path.Combine(str_pdfPath_NEW, $@"{io_str_docNumber}_{str_listCount}.pdf")</_expression>
+                        <_expression>Path.Combine(str_pdfPath_NEW, $@"{io_str_docNumber}_{str_pagesCount}.pdf")</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
